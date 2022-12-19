@@ -36,13 +36,13 @@ endif
 .DEFAULT_GOAL := build
 
 build: gopath
-	go install ${GO_PACKAGE_PREFIX}/cmd/bundles2packages
-	go install ${GO_PACKAGE_PREFIX}/cmd/bundles2files
-	go install ${GO_PACKAGE_PREFIX}/cmd/dissector
-	go install ${GO_PACKAGE_PREFIX}/cmd/downloadpackages
-	go install ${GO_PACKAGE_PREFIX}/cmd/downloadrepo
-	go install ${GO_PACKAGE_PREFIX}/cmd/image2bundles
-	go install ${GO_PACKAGE_PREFIX}/cmd/packages2source
+	go install ${GO_PACKAGE_PREFIX}/cmd/bundles2packages@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/bundles2files@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/dissector@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/downloadpackages@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/downloadrepo@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/image2bundles@${VERSION}
+	go install ${GO_PACKAGE_PREFIX}/cmd/packages2source@${VERSION}
 
 install: gopath
 	test -d $(DESTDIR)/usr/bin || install -D -d -m 00755 $(DESTDIR)/usr/bin;
